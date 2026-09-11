@@ -172,3 +172,8 @@ These categories help determine the severity and priority of the identified secu
 ## Result
 
 The target network was successfully scanned using Nmap and Nessus. Nmap identified active hosts, open ports, running services, and operating system information. Nessus was then used to identify and categorize the vulnerabilities present on the target system.
+## Conclusion
+
+The experiment successfully demonstrated network scanning and vulnerability assessment using Nmap and Nessus. Nmap was used to discover hosts, ports, services, and operating system details, while Nessus was used to identify and classify vulnerabilities according to their severity.
+
+This experiment helped in understanding the importance of network reconnaissance, vulnerability identification, and security assessment in a controlled environment.
