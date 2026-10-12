@@ -1,44 +1,74 @@
-Experiment 4: Firewall and IDS Setup
-Objective
+# Experiment 4: Firewall and IDS Setup
+
+## Objective
+
 To configure firewall rules using pfSense and enable intrusion detection using Snort to monitor network traffic and identify suspicious activities.
 
-Procedure
-Step 1: Configure the pfSense network
+## Procedure
+
+### Step 1: Configure the pfSense Network
+
 Start the pfSense virtual machine and verify the WAN and LAN interface IP addresses. Confirm that the LAN interface is configured and accessible from the lab network.
 
-![Step 1 Screenshot](images/ss1.png)
+**Screenshot:**
 
-Step 2: Verify network connectivity and identify the target
-Use ifconfig on Kali Linux to identify its network interface and IP address. Ping the target machine and perform an Nmap scan to check connectivity and identify open ports and services.
+![Step 1: Configure the pfSense Network](images/ss1.png)
 
-Commands used :
+### Step 2: Verify Network Connectivity and Identify the Target
+
+Use `ifconfig` on Kali Linux to identify its network interface and IP address. Ping the target machine and perform an Nmap scan to check connectivity and identify open ports and services.
+
+**Commands Used:**
+
+```bash
 ifconfig
 ping <Target-IP> -c 4
 nmap <Target-IP>
-![Step 2 Screenshot](images/ss2.png)
+```
 
-Step 3: Configure firewall rules in pfSense
-Log in to the pfSense web interface and navigate to Firewall → Rules → LAN. Configure firewall rules to allow required traffic, such as HTTP, HTTPS, and DNS, and block other traffic according to the lab requirements.
+**Screenshot:**
 
-![Step 3 Screenshot](images/ss3.png)
+![Step 2: Verify Network Connectivity](images/ss2.png)
 
-Step 4: Enable Snort on the LAN interface
-Open Services → Snort → Interfaces in pfSense. Configure Snort on the LAN interface and verify that its status indicates that the service is running.
+### Step 3: Configure Firewall Rules in pfSense
 
-![Step 4 Screenshot](images/ss4.png)
+Log in to the pfSense web interface and navigate to **Firewall → Rules → LAN**. Configure firewall rules to allow required traffic, such as HTTP, HTTPS, and DNS, and block other traffic according to the lab requirements.
 
-Step 5: Generate network traffic and check detection
+**Screenshot:**
+
+![Step 3: Configure Firewall Rules](images/ss3.png)
+
+### Step 4: Enable Snort on the LAN Interface
+
+Open **Services → Snort → Interfaces** in pfSense. Configure Snort on the LAN interface and verify that its status indicates that the service is running.
+
+**Screenshot:**
+
+![Step 4: Enable Snort on the LAN Interface](images/ss4.png)
+
+### Step 5: Generate Network Traffic and Check Detection
+
 Generate network traffic from Kali Linux by pinging the target machine. Perform the relevant connectivity tests and observe the traffic monitored by the configured security tools.
 
-Commands used :
+**Commands Used:**
+
+```bash
 nmap -p 1-1000 <Target-IP>
 ping <Target-IP>
-![Step 5 Screenshot](images/ss5.png)
+```
 
-Step 6: Examine Snort alerts
-Navigate to Services → Snort → Alerts in pfSense. Review the alert log to identify recorded events, including ICMP ping detection alerts generated during the test.
+**Screenshot:**
 
-![Step 6 Screenshot](images/ss6.png)
+![Step 5: Generate Network Traffic](images/ss5.png)
 
-Result
+### Step 6: Examine Snort Alerts
+
+Navigate to **Services → Snort → Alerts** in pfSense. Review the alert log to identify recorded events, including ICMP ping detection alerts generated during the test.
+
+**Screenshot:**
+
+![Step 6: Examine Snort Alerts](images/ss6.png)
+
+## Result
+
 The experiment demonstrated firewall rule configuration using pfSense and network traffic monitoring using Snort, with ICMP ping detection alerts observed in the alert log.
