@@ -5,7 +5,7 @@
 To perform a controlled password-guessing demonstration using Hydra in an authorized lab environment.
 
 ## Theory
-Hydra, also known as THC-Hydra, is an open-source password-auditing tool available in Kali Linux. It is used to test authentication security of services such as SSH, FTP and web login services.
+Hydra, also known as THC-Hydra, is an open-source password-auditing tool available in Kali Linux. It is used to test authentication security of services such as SSH, FTP and web login services. It helps identify weak credentials in an authorized environment.
 
 ## Tools Used
 - Kali Linux
@@ -17,24 +17,25 @@ Hydra, also known as THC-Hydra, is an open-source password-auditing tool availab
 ## Procedure
 
 ### Step 1 – Identify Target Services
-Nmap was used in the authorized lab to identify active services on the target machine. SSH was found running on port 22.
+Nmap was used to scan the authorized lab target. The scan identified several open services, including SSH running on port 22.
 
-![Nmap Scan](outputs/01-nmap-scan.jpg)
+![Nmap Service Scan](outputs/SAVE_20261115_174118.jpg)
 
-### Step 2 – Observe Hydra Authentication Testing
-Hydra was used in the controlled lab to demonstrate authentication testing. An initial connection error was observed.
+### Step 2 – Perform Hydra Authentication Testing
+Hydra was used in the controlled lab environment to demonstrate SSH authentication testing. An initial connection error was observed during the attempt.
 
-![Hydra Attempt](outputs/02-hydra-attempt.jpg)
+![Hydra Authentication Attempt](outputs/SAVE_20261115_174122.jpg)
 
 ### Step 3 – Confirm the Result
-The final Hydra output showed a successful authentication result in the lab environment.
+The final output showed a successful authentication result for the lab test account.
 
-![Hydra Result](outputs/03-hydra-result.jpg)
+![Hydra Successful Result](outputs/SAVE_20261115_174126.jpg)
 
 ## Result
-The experiment demonstrated password-auditing using Hydra and identified a valid test credential pair in the controlled lab environment.
+The experiment demonstrated password auditing with Hydra and showed how weak credentials can affect SSH security in a controlled lab.
 
 ## Conclusion
-The experiment helped us understand Hydra, SSH authentication and the importance of strong passwords.
+We learned about Hydra, SSH authentication and the importance of using strong passwords. Such testing must only be performed on authorized systems.
+
 
 
