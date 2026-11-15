@@ -19,7 +19,7 @@ Hydra, also known as THC-Hydra, is an open-source password-auditing tool availab
 ### Step 1 – Identify Target Services
 Nmap was used to scan the authorized lab target. The scan identified several open services, including SSH running on port 22.
 
-![Nmap Service Scan](outputs/SAVE_20261115_174118.jpg)
+![Nmap Service Scan](outputs/SAVE_20261115_174126.jpg)
 
 ### Step 2 – Perform Hydra Authentication Testing
 Hydra was used in the controlled lab environment to demonstrate SSH authentication testing. An initial connection error was observed during the attempt.
@@ -29,7 +29,7 @@ Hydra was used in the controlled lab environment to demonstrate SSH authenticati
 ### Step 3 – Confirm the Result
 The final output showed a successful authentication result for the lab test account.
 
-![Hydra Successful Result](outputs/SAVE_20261115_174126.jpg)
+![Hydra Successful Result](outputs/SAVE_20261115_174122.jpg)
 
 ## Result
 The experiment demonstrated password auditing with Hydra and showed how weak credentials can affect SSH security in a controlled lab.
