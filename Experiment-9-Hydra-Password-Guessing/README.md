@@ -29,7 +29,8 @@ Hydra was used in the controlled lab environment to demonstrate SSH authenticati
 ### Step 3 – Confirm the Result
 The final output showed a successful authentication result for the lab test account.
 
-![Hydra Successful Result](outputs/SAVE_20261115_174122.jpg)
+![Hydra Successful Result](outputs/SAVE_20261115_174118.jpg)
+
 
 ## Result
 The experiment demonstrated password auditing with Hydra and showed how weak credentials can affect SSH security in a controlled lab.
